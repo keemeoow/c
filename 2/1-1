@@ -1,0 +1,21 @@
+#include <stdio.h> // <>안의 라이브러리(stdio.h는 가장 표준)를 가져옴
+
+/* print Fahrenheit-Celsius table
+    for fahr = 0, 20, ..., 300 */
+    
+main()
+{
+    int fahr, celsius; // 화씨온도, 섭씨온도
+    int lower, upper, step; // 최저값, 최고값, step
+    
+    lower = 0;
+    upper = 300;
+    step = 20;
+    
+    fahr = lower;
+    while(fahr <= upper){
+        celsius = 5*(fahr-32)/9;
+        printf("%d\t%d\n", fahr, celsius);
+        fahr = fahr+step;
+    }
+}
